@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Code Cafe</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </head>
+  <body>
+    <div class="videoBody">
+        <div class="imageHeader">
+            <img height="60" src="images/ieee.png"> <div>Purdue</div>
+        </div>
+        <div class="mainContent">
+            <div class="title">
+                <img src="images/title.png">
+                <br>the coding event for non-coders
+            </div>
+            <div class="description">
+
+                <br>
+                March 24 26 31, 2015
+                <br>7 - 9pm
+            </div>
+            <div class="buttonHolder">
+                <input id="email" onClick="reset()" placeholder="janedoe@purdue.edu"></input>
+                <br>
+                <br>
+                <button id="submit" onClick="apply()">Apply</button>
+            </div>
+        </div>
+        <div class="pageArrow">
+            <img onclick="scroll()" src="images/arrow.png">
+        </div>
+    </div>
+    <div class="card page-2">
+        <div class="card">
+            <h2 class="blueT">What is Code Cafe?</h2>
+            <div class="cardD blueT">
+                Code Cafe is a set of events designed for one purpose: 
+                <br>To teach you how to code.
+            </div>
+            <h2 class="blueT">How much will this cost?</h2>
+            <div class="cardD blueT">
+                This event will be FREE. All you have to do is attend!
+            </div>
+        </div>
+        <div class="card blue resizeable">
+            <div class="floatContainer">
+                <div class="pointFloat">
+                    <h2>What</h2>
+                    Code cafe is an open learning event made to help you get started with learning how to code. At this event, we want you to be as relaxed as possible. You will be provided free beverages (it is a cafe after all), mugs, and swag bags when you enter the door.
+                </div>
+                <div class="pointFloat">
+                    <h2>When | Where</h2>
+                    This three day event will take place in the Hicks Library from 7pm to 9pm EST, March 24th, 26th, and 31st.
+                </div>
+                <div class="pointFloat">
+                    <h2>Who</h2>
+                    This event is open to anybody! If you've ever wanted to learn how to make fancy websites or make the next best app, feel free to apply! Even if you want to come and drink coffee, you're welcome.
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+            <h2 class="blueT">Interested in helping or sponsoring this event?</h2>
+            <div class="cardD blueT">
+                Feel free to contact the Lead at <a href="mailto:johnlee@purdue.edu?Subject=Code Cafe">johnlee@purdue.edu</a>
+            </div>
+        </div>
+        <div class="footer">IEEE - Purdue - 2015</div>
+    </div>
+
+    <script type="application/javascript">
+        function scroll() {
+            $('html,body').animate({
+                scrollTop: [$("body").height(), "swing"]
+            }, 1000);
+        }
+
+        function reset() {
+            $("#email").css("border","none");
+            if ($("#emailError")) $("#emailError").remove();
+        }
+        function apply() {
+            var email = $("#email").val();
+            if (email != '' && validateEmail(email))
+            {
+                postPHP(email);
+            }
+            else {
+                $("#email").css("border","1px solid #ff0000")
+                $("#email").after("<div id='emailError'>Please enter a valid email.</div>")               
+            }
+        }
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

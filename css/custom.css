@@ -1,0 +1,219 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
+html, body {
+	color: white;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: Raleway;
+	font-weight: 300;
+}
+.videoBody {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #006699;
+}
+.card {
+	width: 100%;
+	height: 33.33%;
+	background: #fff;
+}
+.page-2 {
+	height: 100%;
+}
+.blue {
+	background: #006699;
+}
+.imageHeader {
+	position: relative;
+	top: 100px;
+	width: 100%;
+	height: 60px;
+	text-align:center;
+}
+.imageHeader img {
+	margin: 0 auto;
+}
+.imageHeader div {
+	margin-left: 5px;
+	font-size: 54px;
+}
+.mainContent {
+	position: relative;
+	margin: 200px auto;
+	width: 100%;
+	height: 600px;
+	text-align: center;
+	font-size: 1.5em;
+}
+.title {
+	text-align: center;
+	font-size: 1em;
+	font-weight: 400;
+	padding: 2em;
+	color: rgba(255,255,255,0.7);
+}
+#return {
+	width: 200px;
+	background: #fff;
+	border: none;
+	border-radius: 5px;
+	color: #555;
+	padding: 0.2em;
+}
+.title img {
+	margin: 0 auto;
+	height: 150px;
+	padding-bottom: 1.5em;
+}
+.description {
+	margin-top: 3em;
+}
+.buttonHolder {
+	margin-top: 2em;
+}
+.buttonHolder input {
+	padding: 0.3em;
+	padding-right: 1em;
+	padding-left: 1em;
+	color: #555;
+	border-radius: 5px;
+	border: 0;
+}
+.buttonHolder input:focus {
+	outline: none !important;
+	border: 1px solid #006699;
+	box-shadow: 0 0 10px #719ECE;
+}
+.buttonHolder button {
+	background: #fff;
+	color: #999;
+	width: 200px;
+	height: 50px;
+	border-radius: 5px;
+	box-shadow: 0;
+	border: 0;
+	font-weight: 400;
+}
+#emailError {
+	font-size: 0.8em;
+}
+.buttonHolder button:hover {
+	box-shadow: 2px 2px 1px #555;
+}
+
+.pageArrow {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	width: auto;
+}
+.pageArrow img {
+	position: relative;
+	left: -50%;
+	
+}
+.pageArrow img:hover {
+	bottom: 5px;
+	cursor: pointer;
+}
+h2 {
+	font-size: 2em;
+	text-align: center;
+}
+a, a:visited, a:hover {
+	color: #006699;
+	text-decoration: none;
+}
+.blueT {
+	color: #006699;
+}
+.cardD {
+	width: 60%;
+	margin: 0 auto;
+		
+	text-align: center;
+}
+.footer {
+	width: 100%;
+	background: #006699;
+	padding-top: 0.2em;
+	padding-bottom: 0.8em;
+	height: 1em;
+	text-align: center;
+	color: white;
+}
+.floatContainer {
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+.pointFloat {
+	float: left;
+	height: 100%;
+	width: 100%;
+	min-width: 200px;
+	text-align: left;
+	font-size: 1.2em;
+}
+.resizeable {
+	display: flex;
+	height: auto;
+	min-height: 33.333%;
+	padding-bottom: 100px;
+}
+/* Bigger than 550 */
+@media (min-width: 550px) {
+	.imageHeader img {
+		margin-left: 10%;
+		float: left;
+	}
+	.imageHeader div {
+		float: left;
+	}
+	.imageHeader {
+		text-align: left;
+	}
+	.mainContent {
+		margin: 200px auto;
+		width: 800px;
+		height: 600px;
+		text-align: center;
+		font-size: 1.5em;
+	}
+}
+@media (max-height: 920px) {
+	.mainContent {
+	}
+	.imageHeader {
+		top: 40px;
+	}
+}
+@media (max-height: 750px) {
+	html, body {
+		height: 1000px;
+		width: 100%;
+	}
+}
+/* Bigger than 750 */
+@media (min-width: 750px) {
+
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+ 	.cardD{
+ 		font-size: 1.7em;
+ 	}
+	.pointFloat {
+		float: left;
+		width: 30.33%;
+		padding: 1.5%;
+		text-align:;
+
+	}
+	.resizeable {
+		display: block;
+	}
+}
