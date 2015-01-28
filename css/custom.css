@@ -190,7 +190,7 @@ a, a:visited, a:hover {
 		top: 40px;
 	}
 }
-@media (max-height: 750px) {
+@media (max-height: 975px) {
 	html, body {
 		height: 1000px;
 		width: 100%;
