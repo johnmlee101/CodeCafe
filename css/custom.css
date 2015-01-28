@@ -7,12 +7,14 @@ html, body {
 	width: 100%;
 	font-family: Raleway;
 	font-weight: 300;
+
 }
 .videoBody {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	background: #006699;
+
 }
 .card {
 	width: 100%;
@@ -34,6 +36,35 @@ html, body {
 }
 .imageHeader img {
 	margin: 0 auto;
+	cursor: pointer;
+	transition: filter 1s;
+	-webkit-animation: filter-animation2 0.4s forwards;
+
+}
+.imageHeader img:hover {
+	-webkit-animation: filter-animation 0.4s forwards;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: blur(0px) drop-shadow(0);
+  }
+  100% {
+  	-webkit-filter: blur(0px) drop-shadow(16px 16px 10px rgba(0,0,0,0.3));
+  
+  }
+  
+}
+@-webkit-keyframes filter-animation2 {
+  0% {
+  	-webkit-filter: blur(0px) drop-shadow(16px 16px 10px rgba(0,0,0,0.3));
+    
+  }
+  100% {
+  	-webkit-filter: blur(0px) drop-shadow(0);
+  
+  }
+  
 }
 .imageHeader div {
 	margin-left: 5px;
@@ -181,6 +212,10 @@ a, a:visited, a:hover {
 		height: 600px;
 		text-align: center;
 		font-size: 1.5em;
+		-webkit-animation: filter-animation2 0.5s forwards;
+	}
+	.mainContent:hover {
+		-webkit-animation: filter-animation 0.5s forwards;
 	}
 }
 @media (max-height: 920px) {
