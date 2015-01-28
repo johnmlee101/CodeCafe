@@ -7,10 +7,6 @@ function urlParam(name) {
     }
 }
 
-function validateEmail(email) { 
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-} 
 
 function postPHP(email)
 {
@@ -21,7 +17,14 @@ $.ajax({
      email: email 
    },
    success: function(result) {
-        window.location.href = "submitted.html";             
+        if(result == 1)
+        {
+          window.location.href = "submitted.html";    
+        }         
+        else {
+          $("#email").css("border","1px solid #ff0000")
+          $("#email").after("<div id='emailError'>Please enter a valid email.</div>")   
+        }
       },
     error: function(e) {
         console.log(e)

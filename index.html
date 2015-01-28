@@ -107,8 +107,10 @@
             if ($("#emailError")) $("#emailError").remove();
         }
         function apply() {
+            $("#email").css("border","none");
+            if ($("#emailError")) $("#emailError").remove();
             var email = $("#email").val();
-            if (email != '' && validateEmail(email))
+            if (email != '')
             {
                 postPHP(email);
             }
@@ -117,7 +119,11 @@
                 $("#email").after("<div id='emailError'>Please enter a valid email.</div>")               
             }
         }
-
+        $('#email').keypress(function (e) {
+          if (e.which == 13) {
+            apply();
+          }
+        });
 
     </script>
   </body>
