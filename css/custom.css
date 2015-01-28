@@ -14,7 +14,8 @@ html, body {
 	width: 100%;
 	height: 100%;
 	background: #006699;
-
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
 }
 .card {
 	width: 100%;
@@ -33,6 +34,7 @@ html, body {
 	width: 100%;
 	height: 60px;
 	text-align:center;
+	z-index: 100;
 }
 .imageHeader img {
 	margin: 0 auto;
@@ -77,6 +79,7 @@ html, body {
 	height: 600px;
 	text-align: center;
 	font-size: 1.5em;
+	z-index: 100;
 }
 .title {
 	text-align: center;
@@ -139,6 +142,7 @@ html, body {
 	top: 95%;
 	left: 50%;
 	width: auto;
+	z-index: 100;
 }
 .pageArrow img {
 	position: relative;
@@ -194,6 +198,14 @@ a, a:visited, a:hover {
 	min-height: 33.333%;
 	padding-bottom: 100px;
 }
+video#bgvid {
+position: absolute; right: 0; top: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(../images/background.jpg) no-repeat;
+background-size: cover;
+z-index: 50;
+}
 /* Bigger than 550 */
 @media (min-width: 550px) {
 	.imageHeader img {
@@ -218,6 +230,7 @@ a, a:visited, a:hover {
 		-webkit-animation: filter-animation 0.5s forwards;
 	}
 }
+
 @media (max-height: 920px) {
 	.mainContent {
 	}
@@ -232,8 +245,8 @@ a, a:visited, a:hover {
 	}
 }
 /* Bigger than 750 */
-@media (min-width: 750px) {
-
+@media (max-width: 550px) {
+#bgvid { display: none; }
 }
 
 /* Bigger than 1000 */
