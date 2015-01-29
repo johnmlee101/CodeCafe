@@ -7,7 +7,7 @@ html, body {
 	width: 100%;
 	font-family: Raleway;
 	font-weight: 300;
-
+	-webkit-font-smoothing: antialiased;
 }
 .videoBody {
 	position: relative;
@@ -27,6 +27,7 @@ html, body {
 .blue {
 	background: #006699;
 }
+
 .imageHeader {
 	position: relative;
 	top: 100px;
@@ -131,6 +132,9 @@ html, body {
 }
 #emailError {
 	font-size: 0.8em;
+	position: absolute;
+	width: 100%;
+	text-align: center;
 }
 .buttonHolder button:hover {
 	box-shadow: 2px 2px 1px #555;
