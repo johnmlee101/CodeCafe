@@ -59,21 +59,21 @@ function apply() {
 
 
 function loadVideo(){
-  if(randomVideo == 1) {
+  //if(randomVideo == 1) {
     $("#bgvid").children()[0].src = "images/video.mp4"
-  }
-  else {
-    $("#bgvid").children()[0].src = "images/video5.mp4"
-  }
+  //}
+  //else {
+  //  $("#bgvid").children()[0].src = "images/video5.mp4"
+  //}
   $("#bgvid").load();
 }
 var randomVideo;
 $(function() {
-  randomVideo = Math.ceil(Math.random()*2)
-  if(randomVideo == 1)
-  {
+  //randomVideo = Math.ceil(Math.random()*2)
+  //if(randomVideo == 1)
+  //{
     $(".videoBody").css("background","url(images/background2.jpg)")
-  }
+  //}
   loadVideo();
   $(".imageHeader > img").click(function() {
       window.location.href = "http://purdueieee.org"; 

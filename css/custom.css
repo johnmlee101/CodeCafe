@@ -222,7 +222,7 @@ z-index: 50;
 /* Bigger than 550 */
 @media (min-width: 550px) {
 	.videoBody {
-		background: url(../images/background.jpg) no-repeat;
+		background: url(../images/background2.jpg) no-repeat;
 		background-size: cover;
 	}
 	.imageHeader img {
