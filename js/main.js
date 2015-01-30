@@ -32,9 +32,7 @@ $.ajax({
     });  
 }
 
-$(".imageHeader > img").click(function() {
-    window.location.href = "http://purdueieee.org"; 
-});
+
 function scroll() {
     $('html,body').animate({
         scrollTop: [$("body").height(), "swing"]
@@ -58,9 +56,31 @@ function apply() {
         $("#email").after("<div id='emailError'>Please enter a valid email.</div>")               
     }
 }
-$('#email').keypress(function (e) {
+
+
+function loadVideo(){
+  if(randomVideo == 1) {
+    $("#bgvid").children()[0].src = "images/video.mp4"
+  }
+  else {
+    $("#bgvid").children()[0].src = "images/video5.mp4"
+  }
+  $("#bgvid").load();
+}
+var randomVideo;
+$(function() {
+  randomVideo = Math.ceil(Math.random()*2)
+  if(randomVideo == 1)
+  {
+    $(".videoBody").css("background","url(images/background2.jpg)")
+  }
+  loadVideo();
+  $(".imageHeader > img").click(function() {
+      window.location.href = "http://purdueieee.org"; 
+  });
+  $('#email').keypress(function (e) {
   if (e.which == 13) {
     apply();
   }
-});
-
+  });
+})

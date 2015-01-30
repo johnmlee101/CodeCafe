@@ -57,6 +57,16 @@ html, body {
   }
   
 }
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-filter: blur(1px) drop-shadow(0);
+  }
+  100% {
+  	-webkit-filter: blur(0px) drop-shadow(16px 16px 15px rgba(0,0,0,1));
+  
+  }
+  
+}
 @-webkit-keyframes filter-animation2 {
   0% {
   	-webkit-filter: blur(0px) drop-shadow(16px 16px 10px rgba(0,0,0,0.3));
@@ -109,7 +119,6 @@ html, body {
 }
 .buttonHolder input {
 	padding: 0.3em;
-	padding-right: 1em;
 	padding-left: 1em;
 	color: #555;
 	border-radius: 5px;
@@ -150,10 +159,11 @@ html, body {
 .pageArrow img {
 	position: relative;
 	left: -50%;
-	
+	-webkit-animation: filter-animation2 0.4s forwards;
+	-webkit-filter: blur(0px);
 }
 .pageArrow img:hover {
-	bottom: 5px;
+	-webkit-animation: arrow 0.4s forwards;
 	cursor: pointer;
 }
 h2 {
