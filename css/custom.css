@@ -224,6 +224,7 @@ z-index: 50;
 	.videoBody {
 		background: url(../images/background2.jpg) no-repeat;
 		background-size: cover;
+		background-position: right;
 	}
 	.imageHeader img {
 		margin-left: 10%;

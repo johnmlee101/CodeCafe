@@ -72,7 +72,7 @@ $(function() {
   //randomVideo = Math.ceil(Math.random()*2)
   //if(randomVideo == 1)
   //{
-    $(".videoBody").css("background","url(images/background2.jpg)")
+  //$(".videoBody").css("background","url(images/background2.jpg)")
   //}
   loadVideo();
   $(".imageHeader > img").click(function() {
