@@ -75,8 +75,11 @@ $(function() {
   //$(".videoBody").css("background","url(images/background2.jpg)")
   //}
   loadVideo();
-  $(".imageHeader > img").click(function() {
+  $(".imageHeader > img:first-child").click(function() {
       window.location.href = "http://purdueieee.org"; 
+  });
+  $(".imageHeader > img:nth-child(3)").click(function() {
+      window.location.href = "https://www.cs.purdue.edu/cswn/";
   });
   $('#email').keypress(function (e) {
   if (e.which == 13) {

@@ -43,6 +43,7 @@ html, body {
 	-webkit-animation: filter-animation2 0.4s forwards;
 
 }
+
 .imageHeader img:hover {
 	-webkit-animation: filter-animation 0.4s forwards;
 }
@@ -227,8 +228,15 @@ z-index: 50;
 		background-position: right;
 	}
 	.imageHeader img {
-		margin-left: 10%;
+		margin-left: 100px;
 		float: left;
+	}
+	.imageHeader img:first-child {
+		margin-left: 10%;
+	}
+	.imageHeader img:nth-child(3){
+		float: right;
+		margin-right: 10%;
 	}
 	.imageHeader div {
 		float: left;
